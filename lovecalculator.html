@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Love Calculator</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="index.css">
+		</link>
+		<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+	</head>
+
+	<body>
+		<header>
+			<h2>Love Calculator</h2>
+		</header>
+		<div class="grid-container">
+			<div class="inputdiv">
+				<form id="form">
+					<label>Your Name</label><input id="name1"  type="text" name="name"><br>
+					<label>Partner Name</label><input id="name2"  type="text" name="name"><br>
+					<input type="submit" name="submit" id="submit">
+				</form>
+			</div>
+			<div class="result">
+				<img id="img1" src="boy.png" alt="img"><span>Vs</span>
+				<img id="img2" src="girl.png" alt="img">
+				<section>
+					<span>Percentage</span>
+					<strong>
+						<p></p>%
+					</strong>
+				</section>
+				<textarea row="3" disabled="">Result</textarea>
+			</div>
+		</div>
+		<script type="text/javascript" src="index.js"></script>
+	</body>
+
+</html>
