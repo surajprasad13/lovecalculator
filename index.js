@@ -5,7 +5,7 @@ $(document).ready(function () {
     var name2 = $("#name2").val();
 
     var url = "https://love-calculator.p.rapidapi.com/getPercentage?";
-
+    
     $.ajax({
       method: "GET",
       datatype: "json",
@@ -21,8 +21,10 @@ $(document).ready(function () {
       $(".result textarea").html(data["result"]);
       if (data["percentage"] < 50) {
         $("textarea").css("background-color", "red").css("color", "white");
+        $("i").css("color", "red").attr("class","fas fa-heart-broken");
       } else {
         $("textarea").css("background-color", "green").css("color", "white");
+        $("i").css("color", "green").attr("class", "fas fa-heartbeat");
       }
     });
 

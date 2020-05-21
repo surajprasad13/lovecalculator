@@ -3,17 +3,19 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Source Code Pro',
-    monospace;
+        monospace;
 }
 
 body {
     background-color: hsl(231, 69%, 40%);
 }
-header{
-   background: linear-gradient(to right, #9900cc 0%, #00ccff 100%);
-   margin: auto;
+
+header {
+    background: linear-gradient(to right, #9900cc 0%, #00ccff 100%);
+    margin: auto;
 }
-h2{
+
+h2 {
     text-align: center;
     margin: auto;
     color: white;
@@ -23,13 +25,15 @@ h2{
 
 .grid-container {
     margin-top: 30px;
-    margin:30px;
+    margin: 30px;
     height: 400px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
     grid-template-areas: "inputdiv result";
 }
+
+
 /*first div*/
 .inputdiv {
     grid-area: inputdiv;
@@ -45,7 +49,7 @@ input[type=text] {
     padding: 12px 20px;
     margin: 8px 0;
     display: block;
-    border: 1px solid #ccc; 
+    border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
 }
@@ -74,29 +78,44 @@ input[type=submit]:hover {
     border-radius: 10px;
     padding: 20px;
 }
+.image-section{
+    height:50%;
+    text-align: center;
+    justify-content: center;
+}
+i{
+    padding: 50px;
+    font-size: 60px;
+    color: purple;
+}
+.result-section{
+    text-align: center;
+    padding: 20px;
+}
 
-img{
+img {
     background-color: aqua;
-    height: 200px;
-    width: 200px;
+    height: 150px;
+    width: 150px;
     border-radius: 50%;
-    
 }
-img:hover{
-transform: scale(1.2);
-transition: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+
+img:hover {
+    transform: scale(1.2);
+    transition: cubic-bezier(0.895, 0.03, 0.685, 0.22);
 }
-#img2{
-    float:right;
+#img1{
+    float: left;
 }
-section{
+#img2 {
+    float: right;
+}
+
+p {
     text-align: center;
-    font-size: 25px;
 }
-p{
-    text-align: center;
-}
-textarea{
+
+textarea {
     overflow: hidden;
     margin-bottom: 0px;
     height: 80px;
@@ -106,4 +125,20 @@ textarea{
     border-radius: 20px;
     bottom: 0;
     font-size: 20px;
+}
+
+@media all and (max-width: 500px) {
+    body {
+        background-color: black;
+    }
+
+    .grid-container {
+        display: block;
+    }
+    img,#img1,#img2,i{
+        height: 80px;
+        width: 80px;
+        float: none;
+        padding: 0;
+    }
 }
