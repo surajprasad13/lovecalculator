@@ -5,7 +5,7 @@ $(document).ready(function () {
     var name2 = $("#name2").val();
 
     var url = "https://love-calculator.p.rapidapi.com/getPercentage?";
-
+    
     $.ajax({
       method: "GET",
       datatype: "json",
