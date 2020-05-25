@@ -26,17 +26,14 @@ h2 {
 .grid-container {
     margin-top: 30px;
     margin: 30px;
-    height: 400px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
-    grid-template-areas: "inputdiv result";
 }
 
 
 /*first div*/
 .inputdiv {
-    grid-area: inputdiv;
     border: 2px solid rgb(0, 4, 255);
     border-radius: 10px;
     background-color: #f2f2f2;
@@ -71,7 +68,6 @@ input[type=submit]:hover {
 
 /*swcond div*/
 .result {
-    grid-area: result;
     border: 2px solid blue;
     background-color: white;
     border: 2px solid rgb(0, 4, 255);
@@ -127,13 +123,14 @@ textarea {
     font-size: 20px;
 }
 
-@media all and (max-width: 500px) {
+@media only screen and (max-width:500px) {
     body {
         background-color: black;
     }
 
     .grid-container {
-        display: block;
+        display: flex;
+        flex-direction: column;
     }
     img,#img1,#img2,i{
         height: 80px;
